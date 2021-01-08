@@ -1,25 +1,96 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import "./App.css";
+import HeaderBlock from "./components/HeaderBlock/HeaderBlock";
+import Header from "./components/Header/index";
+import Paragraph from "./components/Paragraph/index";
+import Card from "./components/Card";
 
-function App() {
+export const wordsList = [
+  {
+      eng: 'between',
+      rus: 'между'
+  },
+  {
+      eng: 'high',
+      rus: 'высокий'
+  },
+  {
+      eng: 'really',
+      rus: 'действительно'
+  },
+  {
+      eng: 'something',
+      rus: 'что-нибудь'
+  },
+  {
+      eng: 'most',
+      rus: 'большинство'
+  },
+  {
+      eng: 'another',
+      rus: 'другой'
+  },
+  {
+      eng: 'much',
+      rus: 'много'
+  },
+  {
+      eng: 'family',
+      rus: 'семья'
+  },
+  {
+      eng: 'own',
+      rus: 'личный'
+  },
+  {
+      eng: 'out',
+      rus: 'из/вне'
+  },
+  {
+      eng: 'leave',
+      rus: 'покидать'
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderBlock>
+        <Header>Самый быстрый способ выучить язык</Header>
+        <Paragraph>
+        Иметь большой английский словарный запас жизненно необходимо. Ведь для того, чтобы понимать собеседника, даже грамматика не так важна, как достаточный словарный запас. То же касается и общения. Вас поймут, если вы ошибетесь во времени глагола, например, но если вы не можете сказать какое-то конкретное слово, то это уже значительно утяжелит общение.
+
+Рекомендуем взять на заметку список английских слов для изучения из данной статьи, который пригодятся в самых распространенных жизненных ситуациях.
+
+Чтобы учить английские слова быстро и эффективно, можно использовать знакомые всем карточки, метод ассоциаций,специальные онлайн-уроки и программы.
+        </Paragraph>
+      </HeaderBlock>
+     <div className="cardWrap">
+     {
+         wordsList.map(({ eng, rus  }, index) => <Card eng={eng} rus={rus} key={index}/>)
+         }
+     </div>
+     
+      
+      {/* <HeaderBlock>
+        <Header>Тест React</Header>
+        <Paragraph>
+          Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
+          сгенерировать несколько абзацев более менее осмысленного текста рыбы
+          на русском языке, а начинающему оратору отточить навык публичных
+          выступлений в домашних условиях. При создании генератора мы
+          использовали небезизвестный универсальный код речей. Текст
+          генерируется абзацами случайным образом от двух до десяти предложений
+          в абзаце, что позволяет сделать текст более привлекательным и живым
+          для визуально-слухового восприятия. По своей сути рыбатекст является
+          альтернативой традиционному lorem ipsum, который вызывает у некторых
+          людей недоумение при попытках прочитать рыбу текст. В отличии от lorem
+          ipsum, текст рыба на русском языке наполнит любой макет непонятным
+          смыслом и придаст неповторимый колорит советских времен.
+        </Paragraph>
+      </HeaderBlock> */}
+    </>
   );
-}
+};
 
 export default App;

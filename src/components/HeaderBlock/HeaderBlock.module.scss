@@ -1,0 +1,26 @@
+.imgLogosvg {
+    width: 4vw;
+    // height: 40px;
+    margin: 0 auto;
+    position: absolute;
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    top: 2px
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header {
+    margin-top: 4vw;
+    text-align: center;
+    // height: 100vh;
+}
