@@ -3,55 +3,11 @@ import "./App.css";
 import HeaderBlock from "./components/HeaderBlock/HeaderBlock";
 import Header from "./components/Header/index";
 import Paragraph from "./components/Paragraph/index";
-import Card from "./components/Card";
-import CardList from "./components/CardList/CardList";
 
-export const wordsList = [
-  {
-      eng: 'between',
-      rus: 'между'
-  },
-  {
-      eng: 'high',
-      rus: 'высокий'
-  },
-  {
-      eng: 'really',
-      rus: 'действительно'
-  },
-  {
-      eng: 'something',
-      rus: 'что-нибудь'
-  },
-  {
-      eng: 'most',
-      rus: 'большинство'
-  },
-  {
-      eng: 'another',
-      rus: 'другой'
-  },
-  {
-      eng: 'much',
-      rus: 'много'
-  },
-  {
-      eng: 'family',
-      rus: 'семья'
-  },
-  {
-      eng: 'own',
-      rus: 'личный'
-  },
-  {
-      eng: 'out',
-      rus: 'из/вне'
-  },
-  {
-      eng: 'leave',
-      rus: 'покидать'
-  },
-];
+
+import FooterBlock from "./components/FooterBlock/FooterBlock";
+import MainBlock from "./components/MainBlock/MainBlock";
+
 
 const App = () => {
   return (
@@ -66,26 +22,10 @@ const App = () => {
 Чтобы учить английские слова быстро и эффективно, можно использовать знакомые всем карточки, метод ассоциаций,специальные онлайн-уроки и программы.
         </Paragraph>
       </HeaderBlock>
-    <CardList item ={ wordsList}/>
-     
+   <MainBlock />
+    <FooterBlock/>
       
-      {/* <HeaderBlock>
-        <Header>Тест React</Header>
-        <Paragraph>
-          Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
-          сгенерировать несколько абзацев более менее осмысленного текста рыбы
-          на русском языке, а начинающему оратору отточить навык публичных
-          выступлений в домашних условиях. При создании генератора мы
-          использовали небезизвестный универсальный код речей. Текст
-          генерируется абзацами случайным образом от двух до десяти предложений
-          в абзаце, что позволяет сделать текст более привлекательным и живым
-          для визуально-слухового восприятия. По своей сути рыбатекст является
-          альтернативой традиционному lorem ipsum, который вызывает у некторых
-          людей недоумение при попытках прочитать рыбу текст. В отличии от lorem
-          ipsum, текст рыба на русском языке наполнит любой макет непонятным
-          смыслом и придаст неповторимый колорит советских времен.
-        </Paragraph>
-      </HeaderBlock> */}
+     
     </>
   );
 };
