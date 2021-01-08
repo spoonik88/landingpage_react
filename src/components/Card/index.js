@@ -1,6 +1,7 @@
 
 import React from "react";
 import Cardstyle from "./Card.module.scss";
+import cl from "classnames"
 class Card extends React.Component{
 
     state={
@@ -14,10 +15,13 @@ class Card extends React.Component{
 
     }
     render(){
-        const {eng, rus} = this.props
-       
+        const {eng, rus} = this.props;
+       const {done} = this.state;
         return (
-            <div onClick={this.handelCardClick}  className= { this.state.done !== true ? Cardstyle.card : Cardstyle.card + ' ' + Cardstyle.done }>
+            <div 
+            onClick={this.handelCardClick} 
+            className= { cl(Cardstyle.card, {[Cardstyle.done]:done})}
+            >
               <div  className={Cardstyle.cardInner}>
                 <div className={Cardstyle.cardFront}>{eng}</div>
                 <div className={Cardstyle.cardBack}>{rus}</div>

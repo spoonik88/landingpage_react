@@ -4,6 +4,7 @@ import HeaderBlock from "./components/HeaderBlock/HeaderBlock";
 import Header from "./components/Header/index";
 import Paragraph from "./components/Paragraph/index";
 import Card from "./components/Card";
+import CardList from "./components/CardList/CardList";
 
 export const wordsList = [
   {
@@ -65,11 +66,7 @@ const App = () => {
 Чтобы учить английские слова быстро и эффективно, можно использовать знакомые всем карточки, метод ассоциаций,специальные онлайн-уроки и программы.
         </Paragraph>
       </HeaderBlock>
-     <div className="cardWrap">
-     {
-         wordsList.map(({ eng, rus  }, index) => <Card eng={eng} rus={rus} key={index}/>)
-         }
-     </div>
+    <CardList item ={ wordsList}/>
      
       
       {/* <HeaderBlock>
