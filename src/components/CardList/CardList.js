@@ -55,7 +55,7 @@ class CardList extends React.Component {
       return(
           <div className={s.cardWrap}>
                {
-         wordsList.map(({ eng, rus  }, index) => <Card eng={eng} rus={rus} key={index}/>)
+         wordsList.map(({ eng, rus  }, index) => <Card  onDeleted={()=>console.log("ghbdfsdf")} eng={eng} rus={rus} key={index}/>)
          }
           </div>
       )
