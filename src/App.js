@@ -1,31 +1,98 @@
-// import logo from './logo.svg';
-import "./App.css";
-import HeaderBlock from "./components/HeaderBlock/HeaderBlock";
-import Header from "./components/Header/index";
-import Paragraph from "./components/Paragraph/index";
-import FooterBlock from "./components/FooterBlock/FooterBlock";
-import MainBlock from "./components/MainBlock/MainBlock";
+import React from 'react';
+
+import { ClockCircleOutlined, HomeOutlined, SmileOutlined } from '@ant-design/icons';
+
+import BackgroundBlock from './components/BackgroundBlock';
+import Button from './components/Button';
+import CardList from './components/CardList';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Paragraph from './components/Paragraph';
+import Section from './components/Section';
+
+import { wordsList } from './wordsList';
+
+import firstBackground from './assets/background.jpg';
+import secondBackground from './assets/back2.jpg';
+
+import s from './App.module.scss';
 
 
-const App = () => {
-  return (
-    <>
-      <HeaderBlock>
-        <Header>Самый быстрый способ выучить язык</Header>
-        <Paragraph>
-        Иметь большой английский словарный запас жизненно необходимо. Ведь для того, чтобы понимать собеседника, даже грамматика не так важна, как достаточный словарный запас. То же касается и общения. Вас поймут, если вы ошибетесь во времени глагола, например, но если вы не можете сказать какое-то конкретное слово, то это уже значительно утяжелит общение.
+function App() {
+    return (
+        <>
+            <BackgroundBlock
+                backgroundImg={firstBackground}
+                fullHeight
+            >
+                <Header white>
+                    Время учить слова онлайн
+                </Header>
+                <Paragraph white>
+                    Используйте карточки для запоминания и пополняйте активный словарный запас.
+                </Paragraph>
+            </BackgroundBlock>
+            <Section className={s.textCenter}>
+                <Header size="l">
+                    Мы создали уроки, чтобы помочь вам увереннее разговаривать на английском языке
+                </Header>
+                <div className={s.motivation}>
+                    <div className={s.motivationBlock}>
+                        <div className={s.icons}>
+                            <ClockCircleOutlined /> 
+                        </div>
+                        <Paragraph small>
+                            Учитесь, когда есть свободная минутка
+                        </Paragraph>
+                    </div>
 
-Рекомендуем взять на заметку список английских слов для изучения из данной статьи, который пригодятся в самых распространенных жизненных ситуациях.
+                    <div className={s.motivationBlock}>
+                        <div className={s.icons}>
+                            <HomeOutlined />
+                        </div>
+                        <Paragraph small>
+                            Откуда угодно — дома, в&nbsp;офисе, в&nbsp;кафе
+                        </Paragraph>
+                    </div>
 
-Чтобы учить английские слова быстро и эффективно, можно использовать знакомые всем карточки, метод ассоциаций,специальные онлайн-уроки и программы.
-        </Paragraph>
-      </HeaderBlock>
-   <MainBlock />
-    <FooterBlock/>
-      
-     
-    </>
-  );
-};
+                    <div className={s.motivationBlock}>
+                        <div className={s.icons}>
+                            <SmileOutlined />
+                        </div>
+                        <Paragraph small>
+                            Разговоры по-английски без&nbsp;неловких пауз и&nbsp;«mmm,&nbsp;how&nbsp;to&nbsp;say…»
+                        </Paragraph>
+                    </div>
+                </div>
+            </Section>
+            <Section bgColor="#f0f0f0" className={s.textCenter}>
+                <Header size='l'>
+                    Начать учить английский просто
+                </Header>
+                <Paragraph>
+                    Клика по карточкам и узнавай новые слова, быстро и легко!
+                </Paragraph>
+
+                <CardList 
+                    items={wordsList}
+                />
+            </Section>
+            <BackgroundBlock
+                backgroundImg={secondBackground}
+            >
+                <Header size="l" white>
+                    Изучайте английский с персональным сайтом помощником
+                </Header>
+                <Paragraph white>
+                    Начните прямо сейчас
+                </Paragraph>
+                <Button>
+                    Начать бесплатный урок
+                </Button>
+            </BackgroundBlock>
+            <Footer/>
+        </>
+    );
+}
 
 export default App;

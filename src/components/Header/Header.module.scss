@@ -1,4 +1,17 @@
 .header {
-    margin-top: 4vw;
-    text-align: center;
+  color: #000;
+  padding: 24px 0;
+  letter-spacing: 1px;
+  
+  
+  &.sizeXL {
+    font-size: 68px; 
+  }
+  &.sizeL {
+    font-size: 38px;
+  }
+  
+  &.whiteColor {
+    color: #FFF;
+  }
 }
