@@ -3,8 +3,6 @@ import "./App.css";
 import HeaderBlock from "./components/HeaderBlock/HeaderBlock";
 import Header from "./components/Header/index";
 import Paragraph from "./components/Paragraph/index";
-
-
 import FooterBlock from "./components/FooterBlock/FooterBlock";
 import MainBlock from "./components/MainBlock/MainBlock";
 
