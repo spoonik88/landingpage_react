@@ -1,5 +1,8 @@
-.cardWrap {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form {
+  margin-bottom: 24px;
 }
